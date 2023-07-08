@@ -1,6 +1,6 @@
 /* style padrão*/
 body {
-  font-family: "Avenir LT STD", "sans-serif";
+  font-family: "Avenir LT STD", sans-serif;
   font-style: normal;
   color: #20376c;
   background-color: #fafafa;
@@ -161,7 +161,6 @@ body::-webkit-scrollbar-thumb {
   width: 20%;
   float: left;
   border: transparent thin solid;
-  padding: 5px;
 } /*end about*/
 
 /*start goal*/
