@@ -1,0 +1,273 @@
+/* style padrão*/
+body {
+  font-family: "Avenir LT STD", sans-serif;
+  font-style: normal;
+  color: #20376c;
+  background-color: #fafafa;
+  line-height: 1;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: #20376c;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+a:hover {
+  color: #d5626d;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: none;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #4678bc;
+  border-radius: 20px;
+  border: 3px solid #fafafa;
+}
+
+.container {
+  padding: 12px 36px;
+}
+
+.h1 {
+  align-items: center;
+  font-size: 2rem;
+  margin: 0;
+  padding: 3%;
+  font-size: 1.5rem;
+}
+
+/*navbar*/
+#navbar {
+  background-color: rgba(255, 255, 255, 0.75);
+  width: 100%;
+  height: 7.5%;
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-logo {
+  height: auto;
+  width: 4%;
+}
+
+.navbar-nav {
+  display: flex;
+  list-style: none;
+  margin: 3%;
+  padding: 0;
+}
+
+.navbar-nav li {
+  margin-left: 1rem;
+  position: relative;
+}
+
+.nav-link {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(39, 39, 39, 0.9);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.navbar .active .nav-link {
+  color: #20376c;
+}
+
+.nav-link:before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background-color: #d5626d;
+  bottom: -4px;
+  left: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar .nav-link:hover:before,
+.navbar li:hover .nav-link:before,
+.navbar .active .nav-link:before {
+  visibility: visible;
+  opacity: 0.7;
+} /*end nav*/
+
+/*start hero*/
+#hero,
+#goal {
+  background: rgba(245, 197, 210, 0.25);
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  display: inline-block;
+  transition: 0.5s;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  color: #20376c;
+  font-style: normal;
+  line-height: 110%;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 2em;
+  font-weight: 500;
+  color: #20376c;
+  font-style: normal;
+  text-align: left;
+  margin-bottom: 35px;
+}
+
+.img-hero {
+  padding-left: 2%;
+  width: 4%;
+  height: 100%;
+} /* end hero*/
+
+/*start about*/
+#contact,
+#about {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: 2%;
+}
+
+.img-about {
+  width: 20%;
+  float: left;
+  border: transparent thin solid;
+  padding: 5px;
+} /*end about*/
+
+/*start goal*/
+.img-goal {
+  width: 20%;
+  height: 100%;
+}
+
+.img-goal:hover {
+  opacity: 0.7;
+  animation: animacao-infinita 1s infinite;
+}
+@keyframes animacao-infinita {
+  0% {
+    /* Estado inicial */
+    transform: scale(1);
+  }
+  50% {
+    /* Estado intermediário */
+    transform: scale(1.2);
+  }
+  100% {
+    /* Estado final */
+    transform: scale(1);
+  }
+} /*end goal*/
+
+/*start contact*/
+.links {
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0.8%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-link {
+  width: 10%;
+  height: 100%;
+  padding: 0.5%;
+  display: flex;
+  justify-content: center;
+  animation-name: reverse;
+  animation-duration: 1s;
+}
+
+.img-link:hover {
+  background-color: #d5626d;
+  animation-name: myanimation;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes myanimation {
+  from {
+    transform: rotate(0deg) scale(0.8);
+    border-radius: 0px;
+  }
+  to {
+    border-radius: 100px;
+    transform: rotate(360deg) scale(0.7);
+  }
+}
+
+@keyframes reverse {
+  from {
+    border-radius: 100px;
+    transform: rotate(360deg) scale(0.7);
+  }
+  to {
+    border-radius: 0px;
+    transform: rotate(0deg) scale(1);
+  }
+} /*end contact*/
+
+/*start foot*/
+#foot {
+  padding: 2% 0 1%;
+  background: rgba(245, 197, 210, 0.25);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.credits {
+  margin: 0;
+  padding: 0.8%;
+} /*end foot*/
+
+@media screen and (max-width: 800px) {
+  #navbar {
+    padding: 1%;
+  }
+  .navbar-logo {
+    width: 8%;
+  }
+
+  .img-hero {
+    width: 5%;
+  }
+  .img-about {
+    float: none;
+    width: 30%;
+  }
+  .img-goal {
+    width: 35%;
+  }
+}
